@@ -1,0 +1,57 @@
+{
+  "name": "dsh-composer-polish",
+  "version": "0.1.0",
+  "description": "对话框工具行「权限」按钮右侧的「润色」按钮：读取输入框草稿、推断意图并润色提示词，润色后按钮变为「取消」，一键回退到润色前的原文。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "prompt",
+    "polish",
+    "rewrite",
+    "composer"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "author": "ljxdsg12",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljxdsg12/dsh-composer-polish.git"
+  },
+  "homepage": "https://github.com/ljxdsg12/dsh-composer-polish#readme",
+  "bugs": {
+    "url": "https://github.com/ljxdsg12/dsh-composer-polish/issues"
+  }
+}
